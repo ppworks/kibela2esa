@@ -23,7 +23,12 @@ KIBELA_ESA_USER_MAP = {
 }
 ```
 
-### 4. dry runで実行し、移行が問題ないか確認する
+### 4. Kibela から取得したフォルダを配置する
+
+Zip ファイルを展開し、`script.rb`と同じディレクトリへ配置する。
+
+
+### 5. dry runで実行し、移行が問題ないか確認する
 ```shell
 $ bundle exec ruby script.rb
 ```
@@ -32,7 +37,7 @@ $ bundle exec ruby script.rb
 
 この時点で、 `migrater.migrate` を実行すると、API callするparamsをlogに表示して終了します。このlogを見て、移行が正しく行なわれそうかを確認するようにしてください。
 
-### 5. migrateを実行する
+### 6. migrateを実行する
 `migrater.migrate(dry_run: false)` により、実際にAPI callを行ない移行を開始します。
 
 移行対象のオブジェクトが多い場合にはAPIの利用制限がかかることがあります。`sleep` の値を調整したり、サポートに連絡を行うなどで対応してください。
