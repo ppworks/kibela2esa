@@ -1,5 +1,5 @@
 require 'fileutils'
-require 'pry'
+require 'debug'
 require 'esa'
 require 'logger'
 require_relative './kibela'
@@ -82,4 +82,4 @@ end
 
 migrater = Migrater.new
 
-binding.pry
+debugger
