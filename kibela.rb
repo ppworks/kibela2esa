@@ -80,7 +80,7 @@ module Kibela
     def initialize(comment)
       @raw = comment
       @content = @raw['content']
-      @user = @raw['user']
+      @user = @raw['user'] || @raw['author'].delete_prefix('@')
     end
 
     def replace_attachment_names(attachment_list)
